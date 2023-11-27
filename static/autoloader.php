@@ -2,6 +2,8 @@
 require_once "config.php";
 require_once "db.php";
 require_once "util.php";
+require_once "../vendor/autoload.php";
+
 global $authRequired;
 
 session_start();
