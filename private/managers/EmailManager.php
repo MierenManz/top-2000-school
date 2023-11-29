@@ -9,7 +9,7 @@ require '../static/PHPMailer/SMTP.php';
 require '../../static/autoloader.php';
 class EmailManager
 {
-  public static function sendGameMail($id, $html)
+  public static function sendTop2000Mail($id, $html)
   {
     global $config;
     $mail = new PHPMailer(true);
@@ -26,12 +26,12 @@ class EmailManager
       $mail->Port       = $config->smtp->port;                                       //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
       //Recipients
-      $mail->setFrom('student@ictcampus.nl', 'Ratjetoe');
+      $mail->setFrom('student@ictcampus.nl', 'Top 2000');
       // $mail->addAddress($values->email);     //Add a recipient
 
       //Content
       $mail->isHTML(true);                                  //Set email format to HTML
-      $mail->Subject = "Overzicht games";
+      $mail->Subject = "Top 2000 Stemwijzer";
       $mail->Body    = $html;
       //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 

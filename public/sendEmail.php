@@ -40,6 +40,8 @@ $html .= '
 </body>
 </html>';
 
-EmailManager::sendGameMail($_GET['customerId'], $html);
+EmailManager::sendTop2000Mail($_GET['customerId'], $html);
 
 header('location: index.php');
+
+$html;
