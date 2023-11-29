@@ -12,3 +12,4 @@ $config->smtp = new stdClass();
 $config->smtp->host = "smtp.example.com";
 $config->smtp->username = "user@example.com";
 $config->smtp->password = "[[PASSWD]]";
+$config->smtp->port = "465";
