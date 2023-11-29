@@ -3,10 +3,10 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '../static/PHPMailer/Exception.php';
-require '../static/PHPMailer/PHPMailer.php';
-require '../static/PHPMailer/SMTP.php';
-require '../../static/autoloader.php';
+// require '../../vendor/phpmailer/phpmailer/src/Exception.php';
+// require '../../vendor/phpmailer/phpmailer/src/PHPMailer.php';
+// require '../../vendor/phpmailer/phpmailer/src/SMTP.php';
+require '../static/autoloader.php';
 class EmailManager
 {
   public static function sendTop2000Mail($id, $html)
