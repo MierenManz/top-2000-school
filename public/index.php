@@ -6,7 +6,7 @@
 </head>
 
 <body>
-  <?php include "../private/components/navbar.php" ?>
+  <?php include "../private/components/homepageNav.php" ?>
   <h1>Hello World</h1>
 </body>
 
