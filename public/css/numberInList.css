@@ -1,0 +1,109 @@
+@font-face { font-family: pixel; src: url('../fonts/Pixel/small_pixel-7.ttf'); } 
+
+html,body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  background-repeat: no-repeat;
+  /* Width | height */
+  background-position: center center;
+  background-size: 100vw 100vh;
+}
+#gif {
+  width: 100%;
+}
+#logo {
+  margin-top: 40px;
+  height: 150px;
+  /* margin: auto;
+  display: flex;   */
+}
+#text1 {
+  font-family: pixel;
+  color: white;
+
+  font-size: 35px;
+  margin-top: 100px;
+  text-align: center;
+}
+#text2 {
+  font-family: pixel;
+  color: white;
+
+  font-size: 85px;
+  text-align: center;
+}
+
+.pixel2:active {
+  top: 2px;
+}
+
+.pixel2 {
+  /* font-size: 25px; */
+  color: white;
+  height: auto;
+  margin: 10px;
+  margin-top: 40px;
+  font-family: pixel;
+  font-size: 30px;
+  
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  
+  cursor: pointer;
+  
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.pixel2 {
+  text-align: center;
+  position: relative;
+  display: block;
+  margin: 10px;
+  margin-top: 40px;
+  font-family: pixel;
+  text-transform: uppercase;
+  
+  font-size: 30px;
+  color: white;
+}
+
+.pixel2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: -10px;
+  right: -10px;
+  background: red;
+  z-index: -1;
+}
+
+.pixel2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: -6px;
+  right: -6px;
+  background: red;
+  z-index: -1;
+}
+
+.pixel2 {
+  padding: 10px 10px;
+  position: relative;
+  background: red;
+  width: 380px;
+  z-index: 2;
+}
