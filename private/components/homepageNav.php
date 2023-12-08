@@ -20,7 +20,7 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <a href="index.php" class="sc-129ca54c-3 eQHEWO">Home</a>
           <a href="stemwijzer.php" class="sc-129ca54c-3 eQHEWO">Stemwijzer</a>
-          <a href="check.php" class="sc-129ca54c-3 eQHEWO">Check</a>
+          <a href="staatIeErIn.php" class="sc-129ca54c-3 eQHEWO">Check</a>
         </ul>
       </div>
       <a href="logout.php" class="sc-129ca54c-3 eQHEWO" style="display: flex; align-items: center;">

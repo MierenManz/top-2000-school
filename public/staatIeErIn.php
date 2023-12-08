@@ -1,4 +1,12 @@
 <?php
+$date = date('m/d/Y h:i:s a', time());
+$closed = false;
+// var_dump($date);
+if ($date >= '12/08/2023 15:00:00 am') {
+  $closed = true;
+} else {
+  header("location: index.php");
+}
 ini_set("xdebug.var_display_max_children", '-1');
 ini_set("xdebug.var_display_max_data", '-1');
 ini_set("xdebug.var_display_max_depth", '-1');
@@ -8,9 +16,13 @@ $link = json_decode(ApiManager::getGif("cars"));
 $gif = $link->results[0]->media_formats->gif->url;
 
 if ($_POST) {
-  $_SESSION['artist'] = $_POST['artist'];
-  $_SESSION['song'] = $_POST['song'];
-  header("Location: intop2000.php");
+  if ($_POST['artist'] == "" || $_POST['song'] == "") {
+    // echo "<script>alert('Vul alle velden in.');</script>";
+  } else {
+    $artist = $_POST['artist'];
+    $song = $_POST['song'];
+    header("Location: intop2000.php?artist=$artist&song=$song");
+  }
 }
 
 ?>
@@ -39,6 +51,17 @@ if ($_POST) {
           <input id="artist_lookup" name="artist" type="text" placeholder="ARTIEST">
           <input id="song_lookup" name="song" type="text" placeholder="TITLE">
 
+          <?php
+            if ($_POST) {
+              if ($_POST['artist'] == "" || $_POST['song'] == "") {
+                echo "<div id='error'>! Vul alle velden in !</div>";
+              } else {
+                $artist = $_POST['artist'];
+                $song = $_POST['song'];
+                header("Location: intop2000.php?artist=$artist&song=$song");
+              }
+            }
+          ?>
           <button type="submit" class="pixel2">STAAT 'IE ER IN?</button>
           <!-- <div class="pixel2">STAAT 'IE ER IN?</div>  -->
           <a href="#" class="pixel3">VERRAS MIJ!</a>

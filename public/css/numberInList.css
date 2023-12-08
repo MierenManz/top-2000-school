@@ -61,9 +61,11 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  text-decoration: none;
 }
 
 .pixel2 {
+  text-decoration: none;
   text-align: center;
   position: relative;
   display: block;
@@ -101,9 +103,14 @@ body {
 }
 
 .pixel2 {
+  text-decoration: none;
   padding: 10px 10px;
   position: relative;
   background: red;
   width: 380px;
   z-index: 2;
+}
+.pixel2:hover {
+  text-decoration: none;
+  color: white;
 }

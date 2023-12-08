@@ -4,9 +4,10 @@ ini_set("xdebug.var_display_max_data", '-1');
 ini_set("xdebug.var_display_max_depth", '-1');
 require_once("../static/autoloader.php");
 // var_dump($_SESSION);
+if(!$_GET){
+  header('location: staatIeErIn.php');
+}
 $pageTitle = "";
-//$search = $_SESSION['artist'];
-
 // Temporary variables
 $isInList = true;
 $search = "Coldplay";
@@ -70,9 +71,9 @@ $gifLink = $gif->results[0]->media_formats->gif->url;
     <div class="row">
       <div class="col-2"></div>
       <div class="col-8">
-        <div id="text1">Hymn for the weekend by Coldplay</div>
+        <div id="text1"><?php echo $title . " by " . $search; ?></div>
         <div id="text2">STAAT ER IN</div>
-        <button style="margin: auto;" type="submit" class="pixel2">ZOEK EEN LIEDJE</button>
+        <a style="margin: auto;" href="staatIeErIn.php" class="pixel2">ZOEK EEN LIEDJE</a>
       </div>
       <div class="col-2"></div>
     </div>
