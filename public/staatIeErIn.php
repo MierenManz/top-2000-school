@@ -15,16 +15,6 @@ require_once "../static/autoloader.php";
 $link = json_decode(ApiManager::getGif("cars"));
 $gif = $link->results[0]->media_formats->gif->url;
 
-if ($_POST) {
-  if ($_POST['artist'] == "" || $_POST['song'] == "") {
-    // echo "<script>alert('Vul alle velden in.');</script>";
-  } else {
-    $artist = $_POST['artist'];
-    $song = $_POST['song'];
-    header("Location: intop2000.php?artist=$artist&song=$song");
-  }
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
