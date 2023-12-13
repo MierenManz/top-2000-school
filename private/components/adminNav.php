@@ -14,7 +14,7 @@
         </svg>
       </button>
       <span class="sc-129ca54c-1 brHkKp text-center text-lg-start"> <!-- Added text-center and text-lg-start classes -->
-        <a href="home.php"><img src="https://cms-assets.nporadio.nl/npoRadio2/media-uploads/NPO-Radio-2-Top-2000-25e-Logo-Liggend-Donkere-BG-RGB-1.svg?v=1699542108" loading="lazy" alt="Naar homepage" class="sc-129ca54c-10 dohVYf" /></a>
+        <a href="aHome.php"><img src="https://cms-assets.nporadio.nl/npoRadio2/media-uploads/NPO-Radio-2-Top-2000-25e-Logo-Liggend-Donkere-BG-RGB-1.svg?v=1699542108" loading="lazy" alt="Naar homepage" class="sc-129ca54c-10 dohVYf" /></a>
       </span>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
