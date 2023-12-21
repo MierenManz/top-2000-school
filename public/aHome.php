@@ -4,7 +4,7 @@ $Song = SongManager::getAll();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: white;">
 
 <head>
   <?php include "../private/components/head.php" ?>
@@ -54,32 +54,64 @@ $Song = SongManager::getAll();
   <?php include "../private/components/adminNav.php" ?>
   <div class="container">
     <h1>Home pagina</h1>
-
-    <table>
+    <br>
+    <h1>Liedjes Table</h1>
+    <table id="songTable">
       <thead>
         <tr>
           <th><img src="../img/logo/npo_radio2_logo.svg" alt="" width="50" height="50"></th>
           <th>Naam</th>
           <th>Verborgen</th>
+          <th></th>
+          <th></th>
+
         </tr>
       </thead>
       <tbody>
-        <?php
-        foreach ($Song as $s) {
-          echo "<tr>";
-          echo "<td scope='row'>$s->id</td>";
-          echo "<td>$s->name</td>";
-          if ($s->is_hidden == 0) {
-            echo "<td>Nee</td>";
-          } else {
-            echo "<td>Ja</td>";
-          }
-          echo "</tr>";
-        }
-        ?>
+
       </tbody>
     </table>
   </div>
 </body>
 
 </html>
+
+<script>
+  $(document).ready(function() {
+    var page = 1;
+    var loading = false;
+
+    function loadSongs() {
+      if (loading) return;
+
+      loading = true;
+
+      $.ajax({
+        url: 'load_songs.php',
+        type: 'POST',
+        data: {
+          page: page
+        },
+        success: function(data) {
+          // zorgt voor delay als page gelijk is aan 1
+          var delay = page === 1 ? 0 : 1000;
+          setTimeout(function() {
+            $('#songTable tbody').append(data);
+            page++;
+            loading = false;
+          }, delay);
+        }
+      });
+    }
+
+    // Load initial songs
+    loadSongs();
+
+    // Load more songs when user scrolls to the bottom
+    $(window).scroll(function() {
+      if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+        loadSongs();
+      }
+    });
+  });
+</script>
