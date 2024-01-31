@@ -1,0 +1,37 @@
+@font-face { font-family: cafe; src: url('../fonts/CarosSoftExtraBold.woff'); } 
+html, body {
+  margin: 0px;
+  padding: 0px;
+  background-color: white !important;
+}
+#img {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+#img_text {
+  font-size: 5vh;
+  bottom: 10px;
+  position: absolute;
+  color: white;
+  font-family: cafe;
+  padding: 0 30px;
+}
+#img_row {
+  background-color: black;
+  position: relative;
+  padding: 0 30px
+}
+#buy_tickets {
+  display: block;
+  margin: 40px auto;
+  border: none;
+  width: 300px;
+  height: 60px;
+  border-radius: 15px;
+  border: 2px solid black;
+  color: white;
+  font-family: cafe;
+  font-size: 25px;
+  background-color: rgb(203, 0, 0);
+}

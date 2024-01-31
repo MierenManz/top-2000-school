@@ -1,4 +1,229 @@
 @font-face {
+  font-family: pixel;
+  src: url('../fonts/Pixel/small_pixel-7.ttf');
+}
+
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+  background-color: #131317;
+}
+
+#mainGif {
+  height: 265px;
+  object-fit: cover;
+}
+
+#logo_top_2000 {
+  position: absolute;
+  left: 610px;
+  top: 70px;
+  width: 325px;
+}
+
+#artist_lookup {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  width: 400px;
+  height: 50px;
+  font-size: 40px;
+  margin: 30px auto auto auto;
+  border-bottom: 2.5px solid white;
+  border-radius: 1px;
+  color: white;
+  font-family: pixel;
+}
+
+#song_lookup {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  width: 400px;
+  height: 50px;
+  font-size: 40px;
+  margin: 30px auto auto auto;
+  border-bottom: 2.5px solid white;
+  border-radius: 1px;
+  color: white;
+  font-family: pixel;
+}
+
+#button1 {
+  width: 400px;
+  height: 50px;
+  background-color: red;
+}
+
+/* button */
+.pixel2:active {
+  top: 2px;
+}
+
+.pixel2 {
+  /* font-size: 25px; */
+  color: white;
+  height: auto;
+  margin: auto;
+  margin-top: 40px;
+  font-family: pixel;
+  font-size: 30px;
+
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+
+  cursor: pointer;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.pixel2 {
+  text-align: center;
+  position: relative;
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+  font-family: pixel;
+  text-transform: uppercase;
+
+  font-size: 30px;
+  color: white;
+}
+
+.pixel2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: -10px;
+  right: -10px;
+  background: red;
+  z-index: -1;
+}
+
+.pixel2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: -6px;
+  right: -6px;
+  background: red;
+  z-index: -1;
+}
+
+.pixel2 {
+  padding: 10px 10px;
+  position: relative;
+  background: red;
+  width: 380px;
+  z-index: 2;
+}
+
+.pixel3:active {
+  top: 2px;
+}
+
+.pixel3 {
+  /* font-size: 25px; */
+  color: white;
+  height: auto;
+  margin: auto;
+  margin-top: 40px;
+  font-family: pixel;
+  font-size: 30px;
+
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+
+  cursor: pointer;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.pixel3 {
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+  font-family: pixel;
+  text-transform: uppercase;
+
+  font-size: 30px;
+  color: white;
+}
+
+.pixel3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: -10px;
+  right: -10px;
+  background: rgb(111, 111, 111);
+  z-index: -1;
+}
+
+.pixel3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: -6px;
+  right: -6px;
+  background: rgb(111, 111, 111);
+  z-index: -1;
+}
+
+.pixel3 {
+  text-decoration: none;
+  padding: 10px 10px;
+  position: relative;
+  background: rgb(111, 111, 111);
+  width: 380px;
+  z-index: 2;
+}
+
+.pixel3:hover {
+  text-decoration: none;
+  color: white;
+}
+
+#error {
+  padding: 0 10px 0 10px;
+  margin: 40px auto auto auto;
+  border: 4px solid rgb(203, 0, 0);
+  border-radius: 10px;
+  background-color: rgb(250, 63, 63, 70%);
+  color: white;
+  text-align: center;
+  font-family: pixel;
+  font-size: 30px;
+}
+
+@font-face {
   font-family: 'DM Sans';
   src: url("/fonts/DM_Sans/DMSans-Medium.ttf");
   font-weight: 300;
@@ -10,7 +235,7 @@
   src: url("/fonts/DM_Sans/DMSans-Bold.ttf");
   font-weight: 700;
   font-style: normal;
-  }
+}
 
 @font-face {
   font-family: 'DM Sans';
