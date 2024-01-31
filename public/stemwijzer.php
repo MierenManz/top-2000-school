@@ -1,9 +1,13 @@
 <?php
 require_once "../static/autoloader.php";
 
-$songs = SongManager::getAll();
-// echo json_encode($songs, JSON_THROW_ON_ERROR);
+if ($_POST) {
+  $voterId = VoterManager::addVoter($_POST["firstname"], $_POST["lastname"], $_POST["email"], intval($_POST["gender_id"]));
+  SongVoteManager::addVotes($voterId, $_POST["votes"]);
+}
 
+$genders = GenderManager::getAll();
+$songs = SongManager::getAll();
 
 ?>
 <!DOCTYPE html>
@@ -30,6 +34,27 @@ $songs = SongManager::getAll();
     }
   </script>
   <script src="./js/index.js" defer></script>
+  <script>
+    async function sendForm() {
+      const formdata = new FormData();
+      formdata.set("firstname", document.getElementById("firstname").value);
+      formdata.set("lastname", document.getElementById("lastname").value);
+      formdata.set("email", document.getElementById("email").value);
+      formdata.set("gender_id", document.getElementById("gender_id").value);
+
+      const ids = [...window.selected.keys()];
+
+      for (let i = 0; i < ids.length; i++) {
+        formdata.set(`votes[${i}]`, ids[i]);
+      }
+
+      const fetchResult = await fetch("./stemwijzer.php", {
+        method: "POST",
+        body: formdata
+      });
+      location.href = "index.php";
+    }
+  </script>
 </head>
 
 <body>
@@ -48,27 +73,31 @@ $songs = SongManager::getAll();
       </div>
       <div>
         <h3>Stap 3</h3>
-        <p>Klik op versturen</p>
+        <p>Klik op insturen</p>
       </div>
       <div class="col-10">
         <h4>Informatie</h4>
         <div class="form-floating">
-          <input type="text" name="firstname" id="firstname" placeholder="Voornaam" class="form-control">
+          <input type="text" name="firstname" id="firstname" placeholder="Voornaam" class="form-control" required maxlength="20">
           <label for="firstname">Voornaam</label>
         </div>
         <div class="form-floating">
-          <input type="text" name="lastname" id="lastname" placeholder="Achternaam" class="my-1 form-control">
+          <input type="text" name="lastname" id="lastname" placeholder="Achternaam" class="my-1 form-control" required maxlength="30">
           <label for="firstname">Achternaam</label>
         </div>
         <div class="form-floating">
-          <input type="email" name="email" id="email" placeholder="E-Mail" class="form-control">
+          <input type="email" name="email" id="email" placeholder="E-Mail" class="form-control" required maxlength="45">
           <label for="email">E-Mail</label>
         </div>
-        <select>
-          <optgroup label="geslacht">
-
-          </optgroup>
-        </select>
+        <div class="form-floating my-1">
+          <select class="form-control" id="gender_id" name="gender_id">
+            <?php foreach ($genders as $g) : ?>
+              <option value="<?= $g->id ?>"><?= $g->gender ?></option>
+            <?php endforeach ?>
+          </select>
+          <label for="gender_id">Geslacht</label>
+        </div>
+        <button onclick="sendForm()" class="btn btn-success w-100">Insturen</button>
       </div>
     </div>
     <div class="container w-75 row">
