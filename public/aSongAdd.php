@@ -69,14 +69,14 @@ if (isset($_SESSION["access"]) == false) {
 <body>
   <?php include "../private/components/adminNav.php" ?>
   <div class="container">
-    <h1>Liedjes Table</h1>
+    <h1>Liedje Toevoegen</h1>
     <form method="post">
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Naam van het nummer:</label>
         <input type="text" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="emailHelp" required>
       </div>
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Naam van het nummer:</label>
+        <label for="exampleInputEmail1" class="form-label">Naam van artiest:</label>
 
         <select class="form-select" aria-label="Default select example" name="artist">
           <?php foreach ($artists as $artist) : ?>

@@ -19,7 +19,6 @@ if (isset($_SESSION["access"]) == false) {
   header("location: aLogin.php");
   exit();
 }
-var_dump($Song);
 ?>
 
 <!DOCTYPE html>
@@ -79,7 +78,7 @@ var_dump($Song);
         <input type="text" class="form-control" id="exampleInputEmail1" name="name" value="<?= $Song->name ?>" aria-describedby="emailHelp" required>
       </div>
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Naam van het nummer:</label>
+        <label for="exampleInputEmail1" class="form-label">Naam van artiest:</label>
 
         <select class="form-select" aria-label="Default select example" name="artist">
           <?php foreach ($artists as $artist) :
