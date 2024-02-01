@@ -1,9 +1,14 @@
 <?php
+
+use FontLib\Table\Type\head;
+
 require_once "../static/autoloader.php";
 $Song = SongManager::getAll();
 
 if (isset($_GET["delete"])) {
   SongManager::deleteSong($_GET["delete"]);
+  header("location: aSong.php");
+  exit();
 }
 ?>
 
@@ -57,14 +62,17 @@ if (isset($_GET["delete"])) {
 <body>
   <?php include "../private/components/adminNav.php" ?>
   <div class="container">
-    <h1>Home pagina</h1>
-    <br>
     <h1>Liedjes Table</h1>
+    <div class="d-flex justify-content-end mb-2">
+      <a href="aSongAdd.php" class="btn btn-primary">+ Nummer Toevoegen</a>
+
+    </div>
     <table id="songTable">
       <thead>
         <tr>
           <th><img src="../img/logo/npo_radio2_logo.svg" alt="" width="50" height="50"></th>
           <th>Naam</th>
+          <th>Arties</th>
           <th>Verborgen</th>
           <th></th>
           <th></th>

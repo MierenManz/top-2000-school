@@ -19,7 +19,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <a href="artikel.php" class="sc-129ca54c-3 eQHEWO">Artikel</a>
-          <a href="nummer.php" class="sc-129ca54c-3 eQHEWO">Nummers</a>
+          <a href="aSong.php" class="sc-129ca54c-3 eQHEWO">Nummers</a>
           <a href="cafe.php" class="sc-129ca54c-3 eQHEWO">Cafe</a>
           <a href="dj.php" class="sc-129ca54c-3 eQHEWO">DJ</a>
           <a href="vote-end.php" class="sc-129ca54c-3 eQHEWO">Stemmen beëindigen</a>
