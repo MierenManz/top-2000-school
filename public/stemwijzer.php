@@ -58,6 +58,12 @@ $songs = SongManager::getAll();
 </head>
 
 <body>
+  <?php if (isset($_SESSION["access"]) == true) {
+    require_once "../private/components/adminNav.php";
+  } else {
+    include "../private/components/stemwijzerNav.php";
+  }
+  ?>
   <header>
     <img src="/img/logo/top_2000_banner.jpg" style="width: 100vw;">
   </header>

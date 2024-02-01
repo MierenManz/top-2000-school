@@ -10,6 +10,11 @@ if (isset($_GET["delete"])) {
   header("location: aSong.php");
   exit();
 }
+
+if (isset($_SESSION["access"]) == false) {
+  header("location: aLogin.php");
+  exit();
+}
 ?>
 
 <!DOCTYPE html>

@@ -18,15 +18,17 @@
       </span>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <a href="artikel.php" class="sc-129ca54c-3 eQHEWO">Artikel</a>
-          <a href="aSong.php" class="sc-129ca54c-3 eQHEWO">Nummers</a>
+          <a href="index.php" class="sc-129ca54c-3 eQHEWO">Home</a>
+          <a href="stemwijzer.php" class="sc-129ca54c-3 eQHEWO">Stemwijzer</a>
+          <a href="staatIeErIn.php" class="sc-129ca54c-3 eQHEWO">Check</a>
           <a href="cafe.php" class="sc-129ca54c-3 eQHEWO">Cafe</a>
           <a href="dj.php" class="sc-129ca54c-3 eQHEWO">DJ</a>
+          <a href="artikel.php" class="sc-129ca54c-3 eQHEWO">Admin Artikel</a>
+          <a href="aSong.php" class="sc-129ca54c-3 eQHEWO">Admin Nummers</a>
           <a href="vote-end.php" class="sc-129ca54c-3 eQHEWO">Stemmen beëindigen</a>
-
         </ul>
       </div>
-      <a href="logout.php" class="sc-129ca54c-3 eQHEWO" style="display: flex; align-items: center;">
+      <a href="aLogout.php" class="sc-129ca54c-3 eQHEWO" style="display: flex; align-items: center;" onclick="return confirm('Weet je zeker dat je wilt uitloggen')">
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
           <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />

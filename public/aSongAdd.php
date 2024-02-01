@@ -13,6 +13,10 @@ if ($_POST) {
   exit();
 }
 $artists = ArtistManager::allArtists();
+if (isset($_SESSION["access"]) == false) {
+  header("location: aLogin.php");
+  exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +73,7 @@ $artists = ArtistManager::allArtists();
     <form method="post">
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Naam van het nummer:</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="emailHelp">
+        <input type="text" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="emailHelp" required>
       </div>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Naam van het nummer:</label>
