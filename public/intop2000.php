@@ -38,7 +38,6 @@ if ($isInList == false) {
     "grateful"
   );
   $rand = array_rand($happyArray, 1);
-  echo ($rand);
   $finalSearch = $happyArray[$rand] . $search;
   $pageTitle = "Hij zit er in.";
 }

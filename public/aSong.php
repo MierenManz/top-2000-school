@@ -1,6 +1,20 @@
 <?php
+
+use FontLib\Table\Type\head;
+
 require_once "../static/autoloader.php";
 $Song = SongManager::getAll();
+
+if (isset($_GET["delete"])) {
+  SongManager::deleteSong($_GET["delete"]);
+  header("location: aSong.php");
+  exit();
+}
+
+if (isset($_SESSION["access"]) == false) {
+  header("location: aLogin.php");
+  exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -53,18 +67,20 @@ $Song = SongManager::getAll();
 <body>
   <?php include "../private/components/adminNav.php" ?>
   <div class="container">
-    <h1>Home pagina</h1>
-    <br>
     <h1>Liedjes Table</h1>
+    <div class="d-flex justify-content-end mb-2">
+      <a href="aSongAdd.php" class="btn btn-primary">+ Nummer Toevoegen</a>
+
+    </div>
     <table id="songTable">
       <thead>
         <tr>
           <th><img src="../img/logo/npo_radio2_logo.svg" alt="" width="50" height="50"></th>
           <th>Naam</th>
+          <th>Arties</th>
           <th>Verborgen</th>
           <th></th>
           <th></th>
-
         </tr>
       </thead>
       <tbody>
@@ -104,10 +120,10 @@ $Song = SongManager::getAll();
       });
     }
 
-    // Load initial songs
+    // laad de nummers in
     loadSongs();
 
-    // Load more songs when user scrolls to the bottom
+    // laad meer nummers in wanneer naar beneden scrollen
     $(window).scroll(function() {
       if ($(window).scrollTop() + $(window).height() == $(document).height()) {
         loadSongs();
