@@ -42,8 +42,6 @@ $songs = SongManager::getAll();
       formdata.set("email", document.getElementById("email").value);
       formdata.set("gender_id", document.getElementById("gender_id").value);
 
-      const ids = [...window.selected.keys()];
-
       let i = 0;
       for (const id of window.selected.keys()) {
         formdata.set(`votes[${i}]`, id);
