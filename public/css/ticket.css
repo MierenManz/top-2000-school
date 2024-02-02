@@ -1,0 +1,40 @@
+@font-face { font-family: ticket; src: url('../fonts/CarosSoftExtraBold.woff'); } 
+html, body {
+  background-color: #131317 !important;
+}
+#ticket_panel {
+  padding: 30px;
+  border: 4px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+#panel_title {
+  color: white;
+  font-size: 30px;
+  font-family: ticket;
+}
+#button_field {
+  text-align: center;
+  margin-top: 30px;
+}
+#button_field_title {
+  display: block;
+  font-family: ticket;
+  color: white;
+  margin-bottom: 13px;
+}
+.ticket_day {
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  border: 4px solid red;
+  border-radius: 20px;
+
+  font-family: ticket;
+  color: white;
+  transition: 0.2s;
+}
+.ticket_day:hover {
+  border-radius: 10px;
+  background-color: rgba(170, 0, 0, 0.515);
+}
