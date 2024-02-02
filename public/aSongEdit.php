@@ -10,11 +10,9 @@ if ($_POST) {
   } else {
     $isHidden = 0;
   }
-  if (strlen($_POST["name"]) >= 100) {
-    SongManager::updateSong($_POST["name"], $isHidden, $_POST["artist"], $_GET["id"]);
-    header("location: aSong.php");
-    exit();
-  } else
+  SongManager::updateSong($_POST["name"], $isHidden, $_POST["artist"], $_GET["id"]);
+  header("location: aSong.php");
+  exit();
 }
 
 if (isset($_SESSION["access"]) == false) {
@@ -77,7 +75,7 @@ if (isset($_SESSION["access"]) == false) {
     <form method="post">
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Naam van het nummer:</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" name="name" value="<?= $Song->name ?>" aria-describedby="emailHelp" required>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="name" maxlength="100" value="<?= $Song->name ?>" aria-describedby="emailHelp" required>
       </div>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Naam van artiest:</label>
