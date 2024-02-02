@@ -79,7 +79,6 @@ if (isset($_SESSION["access"]) == false) {
       </div>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Naam van artiest:</label>
-
         <select class="form-select" aria-label="Default select example" name="artist">
           <?php foreach ($artists as $artist) :
             if ($artist->name == $Song->artist) {
@@ -92,7 +91,6 @@ if (isset($_SESSION["access"]) == false) {
           <?php endforeach; ?>
         </select>
       </div>
-
       <div class="mb-3 form-check">
         <?php
         if ($Song->is_hidden == 1) {

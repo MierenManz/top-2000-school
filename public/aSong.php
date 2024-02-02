@@ -81,7 +81,6 @@ if (isset($_SESSION["access"]) == false) {
           <th>Verborgen</th>
           <th></th>
           <th></th>
-
         </tr>
       </thead>
       <tbody>
@@ -121,10 +120,10 @@ if (isset($_SESSION["access"]) == false) {
       });
     }
 
-    // Load initial songs
+    // laad de nummers in
     loadSongs();
 
-    // Load more songs when user scrolls to the bottom
+    // laad meer nummers in wanneer naar beneden scrollen
     $(window).scroll(function() {
       if ($(window).scrollTop() + $(window).height() == $(document).height()) {
         loadSongs();
