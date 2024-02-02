@@ -21,7 +21,7 @@
 
       </div>
       <div class="col">
-        <button id="buy_tickets">Tickets reserveren</button>
+        <button onclick="window.location.href='ticket.php';" id="buy_tickets">Tickets reserveren</button>
       </div>
       <div class="col">
 
