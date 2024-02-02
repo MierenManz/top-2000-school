@@ -21,7 +21,7 @@
           <a href="index.php" class="sc-129ca54c-3 eQHEWO">Home</a>
           <a href="stemwijzer.php" class="sc-129ca54c-3 eQHEWO">Stemwijzer</a>
           <a href="staatIeErIn.php" class="sc-129ca54c-3 eQHEWO">Check</a>
-          <a href="cafe.php" class="sc-129ca54c-3 eQHEWO">Cafe</a>
+          <a href="cafe.php" class="sc-129ca54c-3 eQHEWO">Café</a>
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <a href="aLogin.php" class="sc-129ca54c-3 eQHEWO">Login</a>

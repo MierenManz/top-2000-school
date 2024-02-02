@@ -21,7 +21,7 @@
           <a href="index.php" class="sc-129ca54c-3 eQHEWO">Home</a>
           <a href="stemwijzer.php" class="sc-129ca54c-3 eQHEWO">Stemwijzer</a>
           <a href="staatIeErIn.php" class="sc-129ca54c-3 eQHEWO">Check</a>
-          <a href="cafe.php" class="sc-129ca54c-3 eQHEWO">Cafe</a>
+          <a href="cafe.php" class="sc-129ca54c-3 eQHEWO">Café</a>
           <a href="dj.php" class="sc-129ca54c-3 eQHEWO">DJ</a>
           <a href="artikel.php" class="sc-129ca54c-3 eQHEWO">Admin Artikel</a>
           <a href="aSong.php" class="sc-129ca54c-3 eQHEWO">Admin Nummers</a>
