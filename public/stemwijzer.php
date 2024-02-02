@@ -44,8 +44,10 @@ $songs = SongManager::getAll();
 
       const ids = [...window.selected.keys()];
 
-      for (let i = 0; i < ids.length; i++) {
-        formdata.set(`votes[${i}]`, ids[i]);
+      let i = 0;
+      for (const id of window.selected.keys()) {
+        formdata.set(`votes[${i}]`, id);
+        i++;
       }
 
       const fetchResult = await fetch("./stemwijzer.php", {
