@@ -8,9 +8,11 @@ if ($_POST) {
   } else {
     $isHidden = 0;
   }
-  SongManager::insertSong($_POST["name"], $isHidden, $_POST["artist"]);
-  header("location: aSong.php");
-  exit();
+  if (strlen($_POST["name"]) > 100) {
+    SongManager::insertSong($_POST["name"], $isHidden, $_POST["artist"]);
+    header("location: aSong.php");
+    exit();
+  }
 }
 $artists = ArtistManager::allArtists();
 if (isset($_SESSION["access"]) == false) {

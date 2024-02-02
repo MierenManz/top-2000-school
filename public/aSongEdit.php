@@ -10,9 +10,11 @@ if ($_POST) {
   } else {
     $isHidden = 0;
   }
-  SongManager::updateSong($_POST["name"], $isHidden, $_POST["artist"], $_GET["id"]);
-  header("location: aSong.php");
-  exit();
+  if (strlen($_POST["name"]) >= 100) {
+    SongManager::updateSong($_POST["name"], $isHidden, $_POST["artist"], $_GET["id"]);
+    header("location: aSong.php");
+    exit();
+  } else
 }
 
 if (isset($_SESSION["access"]) == false) {
