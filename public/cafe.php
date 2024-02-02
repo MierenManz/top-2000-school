@@ -1,3 +1,6 @@
+<?php
+require_once "../static/autoloader.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +13,12 @@
 </head>
 
 <body>
-  <?php require_once "../private/components/homepageNav.php"; ?>
-  <div id="img_row">
+  <?php if (isset($_SESSION["access"]) == true) {
+    require_once "../private/components/adminNav.php";
+  } else {
+    include "../private/components/homepageNav.php";
+  }
+  ?> <div id="img_row">
     <div id="img_text">Het NPO Radio 2 Top 2000 Café</div>
     <img id="img" src="img/cafe/unknown_top_2000_cafe.webp">
   </div>

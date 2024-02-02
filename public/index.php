@@ -1,3 +1,6 @@
+<?php
+require_once "../static/autoloader.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +9,12 @@
 </head>
 
 <body>
-  <?php include "../private/components/homepageNav.php" ?>
+  <?php if (isset($_SESSION["access"]) == true) {
+    require_once "../private/components/adminNav.php";
+  } else {
+    include "../private/components/homepageNav.php";
+  }
+  ?>
   <h1>Hello World</h1>
 </body>
 
